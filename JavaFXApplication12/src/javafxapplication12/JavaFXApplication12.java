@@ -23,9 +23,9 @@ import javafx.stage.Stage;
 public class JavaFXApplication12 extends Application {
     Button wprowadz = new Button();
     Button przeglad = new Button();
-    GridPane grid = new GridPane();
-    Scene biblioSc = new Scene(grid, 300, 250);
-    Scene wprowadzSc = new Scene(grid,300, 250);
+    //GridPane grid = new GridPane();
+    
+    //Scene wprowadzSc = new Scene(grid,300, 250);
     Stage theStage = null;
     
     
@@ -36,7 +36,7 @@ public class JavaFXApplication12 extends Application {
         
         Text tytul1 = new Text("BIBLIOTEKA");
         wprowadz.setText("Wprowadź zasoby");
-        wprowadz.setOnAction(e-> ButtonClicked(e));
+    //    wprowadz.setOnAction(e-> ButtonClicked(e));
         
         
         przeglad.setText("Przeglądaj"); 
@@ -47,7 +47,7 @@ public class JavaFXApplication12 extends Application {
             }
         });
         
-        
+        GridPane grid = new GridPane();
         grid.setAlignment(Pos.CENTER);
         grid.setHgap(10);
         grid.setVgap(10);
@@ -57,13 +57,13 @@ public class JavaFXApplication12 extends Application {
         grid.add(wprowadz,1,1);
         grid.add(przeglad,1,2);
        
-        
+        Scene biblioSc = new Scene(grid, 300, 250);
         primaryStage.setTitle("Hello World!");
         primaryStage.setScene(biblioSc);
         primaryStage.show();
     } // koniec startu
     
-    
+  /*  
      public void ButtonClicked(ActionEvent e)
     {
         if (e.getSource()== wprowadz)
@@ -71,7 +71,7 @@ public class JavaFXApplication12 extends Application {
         else
             theStage.setScene(biblioSc);
     }
-     
+    */ 
 
     /**
      * @param args the command line arguments

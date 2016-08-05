@@ -18,7 +18,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author MACIEK
+ * @author ANGI
  */
 public class BiblioAngiFX1 extends Application{
     Button btnBiblioWprow, btnBiblioPrzegl, btnWprowadz, btnPrzeglad;

@@ -26,6 +26,7 @@ public class BiblioAngiFX1 extends Application{
     protected static Stage theStage;
     static Scene scBiblio;
     
+ 
 
     @Override
     public void start(Stage primaryStage) {

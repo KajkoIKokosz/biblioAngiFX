@@ -29,6 +29,10 @@ public class DodajBiblio {
         scDodajBiblio = new Scene(gridDodajDzieln);
     } // koniec konstruktora
     
+    public Scene getScene(){
+        return scDodajBiblio;
+    }
+    
     
     
     

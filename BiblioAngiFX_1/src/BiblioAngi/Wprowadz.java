@@ -5,8 +5,9 @@
  */
 package BiblioAngi;
 
-import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -40,15 +41,24 @@ public class Wprowadz {
     }
     
     public void ButtonClicked(ActionEvent e){
-        if (e.getSource() == btnWprowBiblioteka){
-            BiblioAngiFX1.theStage.setScene(BiblioAngiFX1.scBiblio);
-            BiblioAngiFX1.stop();
+        if (e.getSource() == btnWprowBiblio){
+            DodajBiblio dodajBiblio = new DodajBiblio();
+            Platform.exit();
             
-        }
+            BiblioAngiFX1.theStage.setScene(dodajBiblio.getScene());
+            }
         else if (e.getSource() == btnWprowBiblio){
             Wprowadz wprow = new Wprowadz();
             BiblioAngiFX1.theStage.setScene(wprow.getScene());}
-    }
+        
+        else if (e.getSource() == btnWprowBiblioteka){
+            //Platform.exit();
+            //BiblioAngiFX1 b = new BiblioAngiFX1();
+            System.out.println("test: powinno sie odpalić start()"); // test
+            //b.start(new Stage());
+        }
+    } // koniec ButtonClicked
+    
     
    
 }
